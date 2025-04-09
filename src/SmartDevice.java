@@ -16,4 +16,9 @@ public abstract class SmartDevice {
 
     }
     public abstract void deviceInfo();
+
+    public String getStatus() {
+        return this.status;
+
+    }
 }
