@@ -10,10 +10,10 @@ public abstract class SmartDevice {
     }
 
     public void turnOn(){
-
+        status = "ON";
     }
     public void turnOff(){
-
+        status = "OFF";
     }
     public abstract void deviceInfo();
 
