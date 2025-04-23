@@ -1,19 +1,27 @@
 public abstract class SmartDevice {
     String brand;
     String model;
-    String status;
+    boolean status;
 
-    public SmartDevice (String brand, String model, String status){
+    public SmartDevice (String brand, String model){
     this.brand = brand;
     this.model = model;
-    this.status = status;
+    this.status = true;
     }
 
     public void turnOn(){
+        status = true;
+        System.out.println(model+" Esta Encendido");
 
     }
     public void turnOff(){
+        status = false;
+        System.out.println(model+" Esta Apagado");
 
     }
     public abstract void deviceInfo();
+
+    public boolean getStatus() {
+        return status;
+    }
 }

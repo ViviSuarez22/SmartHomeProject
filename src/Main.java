@@ -1,9 +1,16 @@
 public class Main {
     public static void main(String[] args) {
-        SmartThermostat temperature = new SmartThermostat(10);
-        temperature.seeInfo();
+        SmartThermostat temperature = new SmartThermostat("Haceb","611 AS R600A",15);
+        temperature.deviceInfo();
 
-        temperature.setTemperature(50);
+        temperature.turnOn();
+
+        temperature.setTemperature(22);
+        temperature.decreaseTemperature();
+        temperature.increaseTemperature();
+
+        System.out.println("Ahorro De Energia: " + temperature.isEnergySavingMode());
+        temperature.turnOff();
 
     }
 }
